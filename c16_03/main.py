@@ -50,10 +50,7 @@ class Note:
   @classmethod
   def vider(cls):
     cls.instances = []
-  
-
-
-
+ 
 onote = Note('eleve1', 'math', 13)
 print(onote.eleve)
 print(onote.matiere)
@@ -77,10 +74,7 @@ def moyenne_Notes(liste, eleve = None, matiere = None):
   liste_elv_matiere = [le for le in liste_elv if le.matiere == matiere] if matiere is not None else liste_elv
 
   return sum([n.valeur for n in liste_elv_matiere])/len(liste_elv_matiere)
-  
-
-
+ 
 print(moyenne_Notes(notes_enregistrees))
-
 onotes = [Note(*note) for note in notes]
 
