@@ -9,72 +9,66 @@ note8 = ('eleve2', 'math', 14)
 
 notes = [note1, note2, note3, note4, note5, note6,note7,note8]
 
-#Question4
 
-#a)
-
-def moyenne_eleve1(liste):
-  moyenne = [ item[2]  for item in liste if  item[0]=="eleve1"]
-  moyenne1 = sum(moyenne)/len(moyenne)
-  return moyenne1
-
-print(moyenne_eleve1(notes))
+#4 a)
+notes_elv1 = [note for note in notes if note[0] == 'eleve1']
+print(notes_elv1)
+print(sum(note[2] for note in notes_elv1)/len(notes_elv1))
 
 #b)
-
-def moyenne_eleve1(liste):
-  moyenne = [ item[2]  for item in liste if  item[0]=="eleve1" and item[1]=="math" ]
-  moyenne1 = sum(moyenne)/len(moyenne)
-  return moyenne1
-
-print(moyenne_eleve1(notes))
+notes_elv1 = [note for note in notes if note[0] == 'eleve1']
+notes_elv1_maths = [n for n in notes_elv1 if n[1] == 'math']
+print(notes_elv1_maths)
+print(sum(n[2] for n in notes_elv1_maths)/len(notes_elv1_maths))
 
 #c)
-def moyenne_tuple(notes, eleve, matiere):
-  moyenne = [x for x in notes if x[0] == eleve]
-  moyenne_matiere = [x for x in moyenne if x[1] == matiere]
-  return sum([x[2] for x in moyenne_matiere ])/len(moyenne_matiere )
+def moyenne_tuple(notes, eleve = None, matiere = None):
+  notes_elv = [note for note in notes if note[0] == eleve] if eleve is not None else notes
+  notes_elv_matiere = [n for n in notes_elv if n[1] == matiere] if matiere is not None else notes_elv
+
+  return sum([n[2] for n in notes_elv_matiere])/len(notes_elv_matiere)
+
+print(moyenne_tuple(notes,'eleve1','math'))
+
+
+notes_enregistrees = []
 
 class Note:
-  instances = []
+  instances = []  
   def __init__(self, eleve, matiere, valeur): #La méthode pour créer un objet
     self.eleve = eleve
     self.matiere = matiere
     self.valeur = valeur
-    self.instances.append(self)
+    notes_enregistrees.append(self)
 
   def __str__(self):
-    return f"{self.__class__.__name__}('{self.eleve}','{self.matiere}','{self.valeur}')"
+    return "La note est de {self.valeur} pour l'{self.eleve} en {self.matiere}.".format(self=self)
 
+  def afficher(self):
+    print('eleve', self.eleve, 'matiere', self.matiere, 'note', self.valeur)
+  
   @classmethod
   def vider(cls):
     cls.instances = []
+  
 
-  def afficher(self):
-      print(self)
 
-  @classmethod
-  def moyenne(cls, eleve=None, matiere=None):
-      print('****', cls.instances)
-      moyenne = [x for x in cls.instances if x.eleve == eleve] if eleve is not None else _notes
-      moyenne_matiere = [x for x in moyenne if x.matiere == matiere] if matiere is not None else moyenne
-      return sum([x.valeur for x in moyenne_matiere])/len(moyenne_matiere)
 
-onote = Note('eleve1', 'maths', 13)
-
+onote = Note('eleve1', 'math', 13)
+print(onote.eleve)
 print(onote.matiere)
 print(onote.valeur)
 Note.afficher(onote)
+print(onote)
 
+#Question 5
+onotes = [Note(elv, matiere,  valeur) for elv, matiere, valeur in notes]
+for onote in onotes:
+  onote.afficher()
 
-#Question5
-
-onotes=[Note(x,y,z) for x,y,z in notes]
-
-Note.moyenne('eleve2', 'math')
-# Question 7
-
-notes_enregistrées = []
+#Question 7
+for onote in notes_enregistrees:
+  onote.afficher()
 
 #Question 8
 
