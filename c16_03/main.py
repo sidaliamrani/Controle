@@ -76,10 +76,3 @@ Note.moyenne('eleve2', 'math')
 
 notes_enregistrées = []
 
-
-#Question 8
-
-def moyenne_Notes(notes, eleve = None, matiere = None):
-  moyenne = [x for x in notes if x.eleve == eleve] if eleve is not None else notes
-  moyenne_matiere = [x for x in moyenne if x.matiere == matiere] if matiere is not None else moyenne
-  return sum([x.valeur for x in moyenne_matiere])/len(moyenne_matiere)
