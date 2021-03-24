@@ -76,7 +76,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 main.py:37: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <_pytest.capture.DontReadFromInput object at 0x7f35411fc850>, args = ()
+self = <_pytest.capture.DontReadFromInput object at 0x7f7a2fbcda30>, args = ()
 
     def read(self, *args):
 >       raise OSError(
@@ -132,7 +132,7 @@ main.py:37: in moyenne
     eleve = input("Entrez le nom de l'élève: ")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <_pytest.capture.DontReadFromInput object at 0x7f35411fc850>, args = ()
+self = <_pytest.capture.DontReadFromInput object at 0x7f7a2fbcda30>, args = ()
 
     def read(self, *args):
 >       raise OSError(
@@ -215,7 +215,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 main.py:37: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <_pytest.capture.DontReadFromInput object at 0x7f35411fc850>, args = ()
+self = <_pytest.capture.DontReadFromInput object at 0x7f7a2fbcda30>, args = ()
 
     def read(self, *args):
 >       raise OSError(
@@ -256,7 +256,7 @@ main.py:37: in moyenne
     eleve = input("Entrez le nom de l'élève: ")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <_pytest.capture.DontReadFromInput object at 0x7f35411fc850>, args = ()
+self = <_pytest.capture.DontReadFromInput object at 0x7f7a2fbcda30>, args = ()
 
     def read(self, *args):
 >       raise OSError(
@@ -285,7 +285,7 @@ main.py:37: in moyenne
     eleve = input("Entrez le nom de l'élève: ")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <_pytest.capture.DontReadFromInput object at 0x7f35411fc850>, args = ()
+self = <_pytest.capture.DontReadFromInput object at 0x7f7a2fbcda30>, args = ()
 
     def read(self, *args):
 >       raise OSError(
@@ -368,7 +368,7 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 main.py:37: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <_pytest.capture.DontReadFromInput object at 0x7f35411fc850>, args = ()
+self = <_pytest.capture.DontReadFromInput object at 0x7f7a2fbcda30>, args = ()
 
     def read(self, *args):
 >       raise OSError(
